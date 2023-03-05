@@ -1,0 +1,25 @@
+.code {
+  display: block;
+  max-width: 640px;
+  background-color: #1e1e1e;
+  color: #e2e4e8;
+  padding: 16px;
+  margin: 32px auto;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.number {
+  color: #b5cea8;
+  margin-right: 0.3em;
+}
+
+.string {
+  color: #ce9178;
+  margin-right: 0.3em;
+}
+
+.boolean {
+  color: #569cd6;
+  margin-right: 0.3em;
+}
