@@ -1,7 +1,15 @@
 window.onload = () => {
-  displayResult(1 > 2);
+  displayResult(true, false);
 
-  displayResult("test", 12312312, false);
+  displayResult("test");
+
+  displayResult(123);
+
+  displayResult(NaN);
+
+  displayResult(undefined);
+
+  displayResult(null);
 
   displayResult([0, 1]);
 

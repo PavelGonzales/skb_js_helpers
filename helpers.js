@@ -1,6 +1,13 @@
-const createElement = (type, value) => {
+const createElement = (value) => {
+  const type = typeof value;
   const element = document.createElement("span");
   element.className = type;
+
+  if (value === null) {
+    element.className = "null";
+  } else {
+    element.className = type;
+  }
 
   if (typeof value === "object") {
     element.innerText = JSON.stringify(value);
@@ -11,14 +18,22 @@ const createElement = (type, value) => {
   return element;
 }
 
+let delay = 0;
+
 const displayResult = (...args) => {
-  const code = document.createElement("code");
-  code.className = "code";
+  delay += 300;
 
-  args.forEach(arg => {
-    code.appendChild(createElement(typeof arg, arg));
-  });
+  setTimeout(() => {
+    const code = document.createElement("code");
+    code.className = "code";
 
-  document.body.append(code);
+    args.forEach(arg => {
+      code.appendChild(createElement(arg));
+    });
+
+    document.body.append(code);
+
+    console.log(...args)
+  }, delay);
 }
 
