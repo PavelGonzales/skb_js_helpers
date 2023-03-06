@@ -1,3 +1,4 @@
+// window.onload() нужен чтобы работа с DOM деревом началась после загрузки всех наших ресурсов.
 window.onload = () => {
   displayResult(true, false);
 
